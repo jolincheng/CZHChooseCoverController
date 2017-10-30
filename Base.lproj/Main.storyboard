@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxE-gv-1jV">
+                                <rect key="frame" x="132" y="636" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.38623046875" green="1" blue="0.80504014756944442" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0T4-0a-SOC"/>
+                                    <constraint firstAttribute="width" constant="150" id="kih-x7-q9i"/>
+                                </constraints>
+                                <state key="normal" title="打开相册"/>
+                                <connections>
+                                    <action selector="openAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fM6-24-Dlp"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Fx-ix-KlT">
+                                <rect key="frame" x="57" y="70" width="300" height="300"/>
+                                <color key="backgroundColor" red="1" green="0.21653627192170299" blue="0.24594655151956712" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="ghA-mo-EuX"/>
+                                    <constraint firstAttribute="height" constant="300" id="xJH-ov-QTM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Fx-ix-KlT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="LPy-aF-ptJ"/>
+                            <constraint firstItem="5Fx-ix-KlT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ljx-eW-F2P"/>
+                            <constraint firstItem="uxE-gv-1jV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MY0-AI-3hO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uxE-gv-1jV" secondAttribute="bottom" constant="50" id="Onj-DZ-axK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="coverImageView" destination="5Fx-ix-KlT" id="EmB-bI-doX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="108"/>
+        </scene>
+    </scenes>
+</document>
