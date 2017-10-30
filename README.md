@@ -1,14 +1,18 @@
 # CZHChooseCoverController
-起初看到这个功能我是拒绝的，之前做的视频上传都是获取特定的帧数当封面，没有刻意的去选择封面，但是需求已定，随后网上也找了下，没有类似的，于是乎就自己写了一个，有什么改进的地方可以互相交流，话不多说直接上代码了
+![合成 1.gif](http://upload-images.jianshu.io/upload_images/6709174-f9c9f8667d18c705.gif?imageMogr2/auto-orient/strip)
+
+###### 起初看到这个功能我是拒绝的，之前做的视频上传都是获取特定的帧数当封面，没有刻意的去选择封面，但是需求已定，随后网上也找了下，没有类似的，于是乎就自己写了一个，有什么改进的地方可以互相交流，话不多说直接上代码了
 
 1.打开相册，系统相册用的很顺手，所以一直就用系统的相册
-
+```
 //两个代理
 @interface ViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
 
 @end
+```
+```
 //代理方法
 //打开相册
 - (void)openImagePickerController:(UIImagePickerControllerSourceType)type
@@ -80,8 +84,10 @@ self.coverImageView.image = coverImage;
 // dismiss UIImagePickerController
 [self dismissViewControllerAnimated:YES completion:nil];
 }
-2.选择封面控制器
+```
 
+2.选择封面控制器
+```
 //截取几张图片放在底部用作展示，我是用collectionview做展示
 AVURLAsset * asset = [AVURLAsset assetWithURL:self.videoPath];
 CMTime  time = [asset duration];
@@ -110,6 +116,9 @@ UIImage *image = [UIImage imageWithCGImage:img];
 [self.photoArrays addObject:image];
 }
 }
+```
+
+```
 //把存的存的几张图片用collectionview展示出来
 CGRect collectionViewF = CGRectMake(0,  CZH_ScaleHeight(461), ScreenWidth, CZH_ScaleHeight(62.5));
 UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:collectionViewF collectionViewLayout:layout];
@@ -142,6 +151,9 @@ slider.minimumValue = 0;
 //默认选取第一帧展示
 [self chooseWithTime:0];
 
+```
+
+```
 //滑动slider的操作
 - (void)valueChange:(UISlider *)sender {
 
@@ -169,6 +181,9 @@ self.imageView.image = image;
 }
 }
 
+```
+
+```
 //点击返回按钮和完成按钮的操作
 - (void)buttonClick:(UIButton *)sender {
 if (sender.tag == CZHChooseCoverControllerButtonTypeBack) {
@@ -181,8 +196,11 @@ _coverImageBlock(self.imageView.image);
 [self dismissViewControllerAnimated:YES completion:nil];
 }
 }
-ps.模拟器相册没有视频的话可以用下面代码把项目的视频保存到相册
+```
 
+
+ps.模拟器相册没有视频的话可以用下面代码把项目的视频保存到相册
+```
 NSMutableArray *videoArray = [NSMutableArray array];
 //工程中类型是MP4的文件数组
 NSArray *movs = [[NSBundle mainBundle] pathsForResourcesOfType:@"mp4" inDirectory:nil];
@@ -193,3 +211,4 @@ if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(item)) {
 UISaveVideoAtPathToSavedPhotosAlbum(item, self, nil, NULL);
 }
 }
+```
