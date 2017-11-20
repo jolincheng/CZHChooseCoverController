@@ -212,3 +212,5 @@ ps.模拟器相册没有视频的话可以用下面代码把项目的视频保�
         }
     }
 ```
+
+[更多查看blog](http://blog.csdn.net/HurryUpCheng)
