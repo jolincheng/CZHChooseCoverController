@@ -15,14 +15,13 @@
 		590C4D281FA6BD4500B9B11A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 590C4D271FA6BD4500B9B11A /* main.m */; };
 		590C4D321FA6BD4500B9B11A /* saveCoverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 590C4D311FA6BD4500B9B11A /* saveCoverTests.m */; };
 		590C4D3D1FA6BD4500B9B11A /* saveCoverUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 590C4D3C1FA6BD4500B9B11A /* saveCoverUITests.m */; };
-		590C4D4C1FA6BD7900B9B11A /* IMG_3696.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 590C4D4A1FA6BD7800B9B11A /* IMG_3696.mp4 */; };
-		590C4D4D1FA6BD7900B9B11A /* IMG_3692.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 590C4D4B1FA6BD7800B9B11A /* IMG_3692.mp4 */; };
 		590C4D501FA6C7F400B9B11A /* CZHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 590C4D4F1FA6C7F400B9B11A /* CZHTool.m */; };
 		590C4D551FA6CA4400B9B11A /* CZHChooseCoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 590C4D541FA6CA4400B9B11A /* CZHChooseCoverController.m */; };
 		590C4D591FA6CBEA00B9B11A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 590C4D581FA6CBEA00B9B11A /* MBProgressHUD.m */; };
 		590C4D5C1FA6CCE500B9B11A /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 590C4D5B1FA6CCE500B9B11A /* UILabel+Extension.m */; };
 		590C4D5F1FA6CDFA00B9B11A /* CZHChooseCoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 590C4D5E1FA6CDFA00B9B11A /* CZHChooseCoverCell.m */; };
 		590C4D621FA6CE9D00B9B11A /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 590C4D611FA6CE9D00B9B11A /* UIButton+Extension.m */; };
+		59DC4C8B1FDE898B00914721 /* haha.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 59DC4C8A1FDE898B00914721 /* haha.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +58,6 @@
 		590C4D381FA6BD4500B9B11A /* saveCoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = saveCoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		590C4D3C1FA6BD4500B9B11A /* saveCoverUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = saveCoverUITests.m; sourceTree = "<group>"; };
 		590C4D3E1FA6BD4500B9B11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		590C4D4A1FA6BD7800B9B11A /* IMG_3696.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_3696.mp4; sourceTree = "<group>"; };
-		590C4D4B1FA6BD7800B9B11A /* IMG_3692.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_3692.mp4; sourceTree = "<group>"; };
 		590C4D4E1FA6C7F400B9B11A /* CZHTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZHTool.h; sourceTree = "<group>"; };
 		590C4D4F1FA6C7F400B9B11A /* CZHTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZHTool.m; sourceTree = "<group>"; };
 		590C4D511FA6C94C00B9B11A /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
@@ -74,6 +71,7 @@
 		590C4D5E1FA6CDFA00B9B11A /* CZHChooseCoverCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZHChooseCoverCell.m; sourceTree = "<group>"; };
 		590C4D601FA6CE9D00B9B11A /* UIButton+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
 		590C4D611FA6CE9D00B9B11A /* UIButton+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		59DC4C8A1FDE898B00914721 /* haha.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = haha.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +122,7 @@
 		590C4D171FA6BD4500B9B11A /* saveCover */ = {
 			isa = PBXGroup;
 			children = (
+				59DC4C891FDE898B00914721 /* video */,
 				590C4D561FA6CBEA00B9B11A /* MBProgressHUD */,
 				590C4D521FA6C9F500B9B11A /* CZHChooseCover */,
 				590C4D181FA6BD4500B9B11A /* AppDelegate.h */,
@@ -131,8 +130,6 @@
 				590C4D1B1FA6BD4500B9B11A /* ViewController.h */,
 				590C4D1C1FA6BD4500B9B11A /* ViewController.m */,
 				590C4D1E1FA6BD4500B9B11A /* Main.storyboard */,
-				590C4D4B1FA6BD7800B9B11A /* IMG_3692.mp4 */,
-				590C4D4A1FA6BD7800B9B11A /* IMG_3696.mp4 */,
 				590C4D211FA6BD4500B9B11A /* Assets.xcassets */,
 				590C4D231FA6BD4500B9B11A /* LaunchScreen.storyboard */,
 				590C4D261FA6BD4500B9B11A /* Info.plist */,
@@ -184,6 +181,14 @@
 				590C4D581FA6CBEA00B9B11A /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		59DC4C891FDE898B00914721 /* video */ = {
+			isa = PBXGroup;
+			children = (
+				59DC4C8A1FDE898B00914721 /* haha.mp4 */,
+			);
+			path = video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,10 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				590C4D251FA6BD4500B9B11A /* LaunchScreen.storyboard in Resources */,
+				59DC4C8B1FDE898B00914721 /* haha.mp4 in Resources */,
 				590C4D221FA6BD4500B9B11A /* Assets.xcassets in Resources */,
-				590C4D4D1FA6BD7900B9B11A /* IMG_3692.mp4 in Resources */,
 				590C4D201FA6BD4500B9B11A /* Main.storyboard in Resources */,
-				590C4D4C1FA6BD7900B9B11A /* IMG_3696.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

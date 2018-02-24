@@ -120,21 +120,18 @@
 
 //保存本地视频到相册
 - (IBAction)saveVideoToAlbum:(id)sender {
-    
+
+
     NSMutableArray *videoArray = [NSMutableArray array];
-    
+    //工程中类型是MP4的文件数组
     NSArray *movs = [[NSBundle mainBundle] pathsForResourcesOfType:@"mp4" inDirectory:nil];
     [videoArray addObjectsFromArray:movs];
-    
-    // save video to camera roll
     for (id item in videoArray) {
+        //循环保存到相册
         if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(item)) {
-            
-            // Note：save to camera roll is async, so the later item may copy complete than previous item
             UISaveVideoAtPathToSavedPhotosAlbum(item, self, nil, NULL);
         }
     }
-    
 }
 
 - (void)saveAction
