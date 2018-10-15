@@ -107,6 +107,12 @@
     AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:self.videoPath options:opts];
     AVAssetImageGenerator *generator = [AVAssetImageGenerator assetImageGeneratorWithAsset:urlAsset];
     generator.appliesPreferredTrackTransform = YES;
+    /**The actual time of the generated images will be within the range [requestedTime-toleranceBefore, requestedTime+toleranceAfter] and may differ from the requested time for efficiency.
+    Pass kCMTimeZero for both toleranceBefore and toleranceAfter to request frame-accurate image generation; this may incur additional decoding delay.
+    Default is kCMTimePositiveInfinity.*/
+    
+    generator.requestedTimeToleranceAfter = kCMTimeZero;
+    generator.requestedTimeToleranceBefore = kCMTimeZero;
     //总帧数/展示的总数量
     long long baseCount = time.value / PHOTP_COUNT;
     //取出PHOTP_COUNT张图片,存放到数组，用于collectionview
@@ -120,6 +126,8 @@
 
             [self.photoArrays addObject:image];
         }
+        ///释放内存
+    CGImageRelease(img);
     }
 ```
 
@@ -174,7 +182,12 @@
     AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:self.videoPath options:opts];
     AVAssetImageGenerator *generator = [AVAssetImageGenerator assetImageGeneratorWithAsset:urlAsset];
     generator.appliesPreferredTrackTransform = YES;
-    //    generator.maximumSize = CGSizeMake(ScreenWidth, ScreenHeight);
+    /**The actual time of the generated images will be within the range [requestedTime-toleranceBefore, requestedTime+toleranceAfter] and may differ from the requested time for efficiency.
+    Pass kCMTimeZero for both toleranceBefore and toleranceAfter to request frame-accurate image generation; this may incur additional decoding delay.
+    Default is kCMTimePositiveInfinity.*/
+    
+    generator.requestedTimeToleranceAfter = kCMTimeZero;
+    generator.requestedTimeToleranceBefore = kCMTimeZero;
 
 
     NSError *error = nil;
@@ -184,6 +197,8 @@
 
         self.imageView.image = image;
     }
+    ///释放内存
+    CGImageRelease(img);
 }
 
 ```
