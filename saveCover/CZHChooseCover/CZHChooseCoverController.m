@@ -82,6 +82,8 @@ static NSString *const ID = @"CZHChooseCoverCell";
             
             [self.photoArrays addObject:image];
         }
+        ///释放内存
+        CGImageRelease(img);
     }
   
 }
@@ -162,7 +164,7 @@ static NSString *const ID = @"CZHChooseCoverCell";
 
 - (void)valueChange:(UISlider *)sender {
     
-    int timeValue = sender.value;
+    CMTimeValue timeValue = sender.value;
     
     [self chooseWithTime:timeValue];
 }
@@ -170,12 +172,18 @@ static NSString *const ID = @"CZHChooseCoverCell";
 
 - (void)chooseWithTime:(CMTimeValue)time {
     
+    
     NSDictionary *opts = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
     AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:self.videoPath options:opts];
     AVAssetImageGenerator *generator = [AVAssetImageGenerator assetImageGeneratorWithAsset:urlAsset];
     generator.appliesPreferredTrackTransform = YES;
-    //    generator.maximumSize = CGSizeMake(ScreenWidth, ScreenHeight);
     
+    /**The actual time of the generated images will be within the range [requestedTime-toleranceBefore, requestedTime+toleranceAfter] and may differ from the requested time for efficiency.
+    Pass kCMTimeZero for both toleranceBefore and toleranceAfter to request frame-accurate image generation; this may incur additional decoding delay.
+    Default is kCMTimePositiveInfinity.*/
+    
+    generator.requestedTimeToleranceAfter = kCMTimeZero;
+    generator.requestedTimeToleranceBefore = kCMTimeZero;
     
     NSError *error = nil;
     CGImageRef img = [generator copyCGImageAtTime:CMTimeMake(time, self.timeScale) actualTime:NULL error:&error];
@@ -184,6 +192,8 @@ static NSString *const ID = @"CZHChooseCoverCell";
         
         self.imageView.image = image;
     }
+    ///释放内存
+    CGImageRelease(img);
 }
 
 
