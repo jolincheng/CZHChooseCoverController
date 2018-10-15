@@ -1,4 +1,9 @@
 # CZHChooseCoverController
+
+![公司的项目.png](https://upload-images.jianshu.io/upload_images/6709174-4b217cb5f07b1f6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+公司的项目，求支持，如果发现什么问题，可以留言反应，感激不尽
+
 ![合成 1.gif](http://upload-images.jianshu.io/upload_images/6709174-f9c9f8667d18c705.gif?imageMogr2/auto-orient/strip)
 
 ###### 起初看到这个功能我是拒绝的，之前做的视频上传都是获取特定的帧数当封面，没有刻意的去选择封面，但是需求已定，随后网上也找了下，没有类似的，于是乎就自己写了一个，有什么改进的地方可以互相交流，话不多说直接上代码了
